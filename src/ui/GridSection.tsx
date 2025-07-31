@@ -1,6 +1,6 @@
 interface GridSectionProps {
   title: string;
-  content: string;
+  content: React.ReactNode;
   imageUrl?: string;
   imageAlt?: string;
   reverse?: boolean;
@@ -20,14 +20,14 @@ function GridSection({
       }`}
     >
       <div className={reverse ? "lg:col-start-2" : ""}>
-        <h2 className="text-4xl font-bold mb-8 font-mono text-orange-700">
+        <h2 className="text-4xl font-bold mb-8 font-mono text-orange-600">
           {title}
         </h2>
         <p className="text-xl text-stone-700 leading-relaxed">{content}</p>
       </div>
 
       <div
-        className={`rounded-xl overflow-hidden min-h-[400px] ${
+        className={`rounded-xl overflow-hidden min-h-[400px] shadow-none border-0 ${
           reverse ? "lg:col-start-1" : ""
         }`}
       >
@@ -35,7 +35,7 @@ function GridSection({
           <img
             src={imageUrl}
             alt={imageAlt}
-            className="w-full h-full object-cover rounded-xl"
+            className="w-full h-full object-cover shadow-none border-0"
           />
         ) : (
           <div className="bg-stone-100 rounded-xl p-12 flex items-center justify-center min-h-[400px] text-stone-500 font-mono text-center">

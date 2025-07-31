@@ -28,7 +28,26 @@ function Content() {
 
         <GridSection
           title="3. All together"
-          content="The final stage of the pipeline begins with the predicted spatial positions for each vocal segment. We use a custom developed Python library that provides a simple, object oriented interface for spatializing audio. Each vocal segment is processed individually and rendered into its predicted 3D position. These spatialized segments are then appended together to create the final, binaural vocal track. Finally, this track is combined with the other instrumental stems (drums, bass, etc.) to produce the complete, immersive song."
+          content={
+            <>
+              The final stage of the pipeline begins with the predicted spatial
+              positions for each vocal segment. We use a{" "}
+              <a
+                href="https://github.com/notcolumbus/spatialAudiopy"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-orange-600 underline hover:text-orange-700 transition-colors"
+              >
+                custom developed Python library
+              </a>{" "}
+              that provides a simple, object oriented interface for spatializing
+              audio. Each vocal segment is processed individually and rendered
+              into its predicted 3D position. These spatialized segments are
+              then appended together to create the final, binaural vocal track.
+              Finally, this track is combined with the other instrumental stems
+              (drums, bass, etc.) to produce the complete, immersive song.
+            </>
+          }
           imageUrl="https://8vjfu80j4c.ufs.sh/f/WxwgvH28Klu0z0FXpd3W4IacxweF9qVPCyupvt2hLN7Ski6Y"
           imageAlt="3D Audio Positioning Grid"
           reverse={true}
